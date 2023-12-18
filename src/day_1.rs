@@ -122,9 +122,9 @@ pub fn solve_the_puzzle_1_1() {
                         }
                         index += token.len();
                     }
-                    //println!("{}-{} {},{}", token, value, start, end);
+                    //println!("{}-{} {},{}", token, value, source, destination);
                 }
-                //println!("{},{}", start, end);
+                //println!("{},{}", source, destination);
                 for (idx, c) in line.chars().enumerate() {
                     if c.is_digit(10) {
                         if start == -1 {
@@ -146,7 +146,7 @@ pub fn solve_the_puzzle_1_1() {
                         }
                     }
                 }
-               //println!("{},{}", start, end);
+               //println!("{},{}", source, destination);
 
                 if start != -1 && end != -1 {
                     let number = format!("{}{}",start_num,end_num);
