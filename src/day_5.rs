@@ -1,6 +1,5 @@
 #[path = "utils/file.rs"]
 mod file;
-use std::{fs, usize};
 
 /*
 --- Day 5: If You Give A Seed A Fertilizer ---
