@@ -50,7 +50,7 @@ impl Node {
     }
 }
 
-fn steps(path: Vec<char>, graph: HashMap<String, Node>, start: String, goal: String) -> usize {
+fn steps(path: &Vec<char>, graph: &HashMap<String, Node>, start: String, goal: String) -> usize {
     let mut node = start;
     1 + path.iter().cycle().position(|&d| {
         node = graph[&node].pick(&d).to_string();
@@ -89,7 +89,7 @@ pub fn solve_the_puzzle_8_1() {
                 let (key, node) = parse(pair);
                 graph.insert(key.to_string(), node);
             }
-            let result = steps(instructions, graph, "AAA".to_string(), "ZZZ".to_string());
+            let result = steps(&instructions, &graph, "AAA".to_string(), "ZZZ".to_string());
             println!("{}", result);
         }
     }
@@ -143,7 +143,7 @@ pub fn solve_the_puzzle_8_2() {
             }
             let result = graph.keys()
                 .filter(|k| k.ends_with("A"))
-                .map(|node| steps(instructions, graph, node.to_string(), "Z".to_string()))
+                .map(|node| steps(&instructions, &graph, node.to_string(), "Z".to_string()))
                 .fold(1, |ans, x| (x*ans)/gcd(x, ans));
             println!("{}", result);
         }
