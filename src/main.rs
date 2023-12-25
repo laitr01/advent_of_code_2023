@@ -4,6 +4,11 @@ mod day_3;
 mod day_4;
 mod day_5;
 mod day_6;
+mod day_7;
+mod day_7_2;
+mod day_8;
+mod day_9;
+mod day_10;
 
 use crate::day_1::solve_the_puzzle_1_0;
 use crate::day_1::solve_the_puzzle_1_1;
@@ -20,6 +25,14 @@ use crate::day_5::solve_the_puzzle_5_1;
 use crate::day_5::solve_the_puzzle_5_2;
 use crate::day_6::solve_the_puzzle_6_1;
 use crate::day_6::solve_the_puzzle_6_2;
+use crate::day_7::solve_the_puzzle_7_1;
+use crate::day_7_2::solve_the_puzzle_7_2;
+use crate::day_8::solve_the_puzzle_8_1;
+use crate::day_8::solve_the_puzzle_8_2;
+use crate::day_9::solve_the_puzzle_9_1;
+use crate::day_9::solve_the_puzzle_9_2;
+use crate::day_10::solve_the_puzzle_10_1;
+use crate::day_10::solve_the_puzzle_10_2;
 
 fn main() {
     solve_the_puzzle_1_0();
@@ -37,4 +50,12 @@ fn main() {
     //solve_the_puzzle_5_2();
     solve_the_puzzle_6_1();
     solve_the_puzzle_6_2();
+    solve_the_puzzle_7_1();
+    solve_the_puzzle_7_2();
+    solve_the_puzzle_8_1();
+    solve_the_puzzle_8_2();
+    solve_the_puzzle_9_1();
+    solve_the_puzzle_9_2();
+    solve_the_puzzle_10_1();
+    solve_the_puzzle_10_2();
 }
